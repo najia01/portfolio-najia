@@ -37,8 +37,16 @@ const projects = (await getCollection('work'))
 					<div class="roles">
 						<Pill><Icon icon="code" size="1.33em" /> Développeuse web</Pill>
 						<Pill><Icon icon="pencil-line" size="1.33em" /> Créatrice de site </Pill>
+						
 					</div>
+					<div class="download-cv">
+						<Pill class="cv-button">
+							<a href="/chemin/vers/votre/CV.pdf" download>Télécharger mon CV</a>
+						</Pill>
+					</div>
+					
 				</Hero>
+				
 
 				<img
 					alt="najia ligali at work"
@@ -46,6 +54,8 @@ const projects = (await getCollection('work'))
 					height="620"
 					src="/assets/najia.JPG"
 				/>
+
+				
 			</header>
 
 			<Skills />
@@ -111,6 +121,39 @@ const projects = (await getCollection('work'))
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
+	}
+
+	.download-cv {
+		text-align: center; /* Centre le bouton dans le bloc */
+		margin-top: 1rem; /* Espace entre les boutons de rôle et le bouton de téléchargement */
+	}
+
+	.cv-button a {
+		display: block;
+		padding: 0.5rem 1rem;
+		text-decoration: none;
+		color: inherit; /* Hérite la couleur du texte du parent */
+		font-weight: bold;
+	}
+
+	.cv-button a:hover {
+		text-decoration: underline;
+	}
+	.pill {
+		display: inline-block;
+		margin: 0.5rem;
+		padding: 0.5rem 1rem;
+		border: 1px solid transparent;
+		border-radius: 9999px;
+		background-color: #007bff;
+		color: white;
+		cursor: pointer;
+		transition: background-color 0.3s, border-color 0.3s;
+	}
+
+	.pill:hover {
+		background-color: #0056b3;
+		border-color: #004085;
 	}
 
 	.roles {
